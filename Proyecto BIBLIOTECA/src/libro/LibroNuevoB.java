@@ -1,5 +1,7 @@
 package libro;
 
+import java.time.LocalDate;
+
 public class LibroNuevoB extends Libro {
 	
 	private String codigo;
@@ -9,12 +11,13 @@ public class LibroNuevoB extends Libro {
 	private double precio;
 	private String estado="Disponible";
 	private String cedula;
-	
-	private  static String nombreL;
-	private  static String autorL;
-	
+		
 	private String codigoAutorizado;
 	private int tiempoLectura;
+	
+
+	
+	private  LocalDate fechaReserva=null;
 	
 	public LibroNuevoB(String codigo,String nombre, String autor, int anoDePublicacion,String editorial,int cantidadPaginas,double precio,String codigoAutorizado,int tiempoLectura,String cedula) {
 		super(nombre, autor);
@@ -107,5 +110,13 @@ public class LibroNuevoB extends Libro {
 	public void setTiempoLectura(int tiempoLectura) {
 		this.tiempoLectura = tiempoLectura;
 	}
-	
+
+	public LocalDate getFechaReserva() {
+		return fechaReserva;
+	}
+
+	public void setFechaReserva(LocalDate fechaReserva) {
+		this.fechaReserva = fechaReserva;
+	}
+
 }
